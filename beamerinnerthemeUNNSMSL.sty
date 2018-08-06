@@ -1,0 +1,32 @@
+\mode<presentation>
+
+%==============================================================================
+% Title page
+%==============================================================================
+\defbeamertemplate*{title page}{UNNSMSL}[1][]
+{
+  \vskip0.4cm%
+  \includegraphics[width=4.7cm]{northumbria_logo.png}
+  \vskip1cm%
+  \begin{center}
+    \usebeamerfont{title}\inserttitle\par%
+  \end{center}
+  \vskip3cm%
+  \usebeamerfont{author}\insertauthor
+  \vskip0cm
+  \textcolor{orange}{\rule{120pt}{0.4pt}}
+  \vskip0.2cm%
+  \usebeamerfont{institute}Smart Material \& Surfaces Laboratory, Faculty of Engineering \& Environment
+  \vskip0.2cm%
+  \usebeamerfont{date}\insertdate%
+  \vfill
+}
+
+%==============================================================================
+% items bullets
+%==============================================================================
+\setbeamertemplate{itemize item}{--}
+\setbeamertemplate{itemize subitem}[circle]
+
+\mode
+<all>

@@ -1,0 +1,52 @@
+\mode<presentation>
+
+%==============================================================================
+% Frame title
+%==============================================================================
+\defbeamertemplate*{frametitle}{UNNSMSL}[1][]
+{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.23cm]{frametitle}
+    \begin{tikzpicture}
+      \fill[gray!70!black] (0,0) rectangle(\the\paperwidth,1.5);
+      \ifx\insertframesubtitle\@empty%
+      {\node[anchor=west, white,font=\LARGE] at (0.6,0.61){\insertframetitle};}
+      \else%
+      {\node[anchor= west, white,font=\LARGE] at (0.6,0.81){\insertframetitle};%
+        \node[anchor= west, white,font=\small] at (0.7,0.31){\insertframesubtitle};}%
+      \fi
+      \node[inner sep=0pt] (univ) at (11.3,0.64)
+      {\includegraphics[width=.28\textwidth]{northumbria_univ.png}};
+    \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+%==============================================================================
+% Logo
+%==============================================================================
+\def\logo{%
+  \includegraphics[width=2.52cm]{northumbria_logo.png}
+}
+
+%==============================================================================
+% Foot line
+%==============================================================================
+\defbeamertemplate*{footline}{UNNSMSL}{%
+  \ifnum\thepage>1%
+  \vspace{-2cm}%
+  \hskip1.9cm%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=1cm]{page number in head/foot}
+    \begin{columns}
+      \begin{column}{.71\paperwidth}
+        \vspace{-0.1cm}
+        Smart Materials \& Surfaces Lab
+      \end{column}
+      \begin{column}{.71\paperwidth}
+        \logo
+        \hspace{-.2cm}
+        \insertpagenumber\,\kern1em\vskip2pt%
+      \end{column}
+    \end{columns}
+    \vspace{.2cm}
+  \end{beamercolorbox}
+  \fi
+}
