@@ -22,6 +22,14 @@
   \vfill
 }
 
+\def\maketitle{%
+  \ifbeamer@inframe
+    \titlepage
+  \else
+    \frame[plain,noframenumbering]{\titlepage}
+  \fi
+}
+
 %==============================================================================
 % items bullets
 %==============================================================================
