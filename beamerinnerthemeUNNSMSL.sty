@@ -36,5 +36,45 @@
 \setbeamertemplate{itemize item}{--}
 \setbeamertemplate{itemize subitem}[circle]
 
+%==============================================================================
+% Block
+%==============================================================================
+\setbeamertemplate{block begin}{
+  \par\vskip\medskipamount%
+  \setlength{\parskip}{0pt}
+  \ifbeamercolorempty[bg]{block title}{%
+    \begin{beamercolorbox}[rightskip=0pt plus 4em]{block title}}{%
+  \ifbeamercolorempty[bg]{block title}{%
+    \begin{beamercolorbox}[rightskip=0pt plus 4em]{block title}%
+  }%
+  {%
+    \begin{beamercolorbox}[
+      sep=\dimexpr 0.5ex \relax,
+      leftskip=0.25ex,
+      rightskip=\dimexpr 0.25ex plus 4em \relax
+    ]{block title}%
+  }}%
+      \usebeamerfont*{block title}%
+      \vphantom{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()}%
+      \insertblocktitle%
+      \vphantom{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()}%
+  \end{beamercolorbox}%
+  \nointerlineskip%
+  \ifbeamercolorempty[bg]{block body}{%
+    \begin{beamercolorbox}[vmode]{block body}}{
+  \ifbeamercolorempty[bg]{block body}{%
+    \begin{beamercolorbox}[vmode]{block body}%
+  }{%
+    \begin{beamercolorbox}[sep=0.75ex, vmode]{block body}%
+    \vspace{-0.5em}
+  }}%
+      \usebeamerfont{block body}%
+      \setlength{\parskip}{0.5em}%
+}
+\setbeamertemplate{block end}{
+  \end{beamercolorbox}\vspace*{0.2ex}
+}
+
+
 \mode
 <all>
