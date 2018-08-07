@@ -5,21 +5,22 @@
 %==============================================================================
 \defbeamertemplate*{title page}{UNNSMSL}[1][]
 {
-  \vskip0.4cm%
+  \begin{minipage}[b][\paperheight]{\textwidth}
+  \vspace{.5cm}
   \includegraphics[width=4.7cm]{northumbria_logo.png}
-  \vskip1cm%
+  \vspace{.5cm} \\
   \begin{center}
     \usebeamerfont{title}\inserttitle\par%
-  \end{center}
-  \vskip3cm%
-  \usebeamerfont{author}\insertauthor
-  \vskip0cm
-  \textcolor{orange}{\rule{120pt}{0.4pt}}
-  \vskip0.2cm%
-  \usebeamerfont{institute}Smart Material \& Surfaces Laboratory, Faculty of Engineering \& Environment
-  \vskip0.2cm%
-  \usebeamerfont{date}\insertdate%
+  \end{center}%
   \vfill
+  \usebeamerfont{author}\insertauthor \\
+  \textcolor{orange}{\rule{120pt}{0.4pt}}
+  \vspace{0.1cm} \\
+  \usebeamerfont{institute}Smart Material \& Surfaces Laboratory, Faculty of Engineering \& Environment
+  \vspace{0.1cm} \\
+  \usebeamerfont{date}\insertdate%
+  \vspace{.5cm}
+  \end{minipage}
 }
 
 \def\maketitle{%
