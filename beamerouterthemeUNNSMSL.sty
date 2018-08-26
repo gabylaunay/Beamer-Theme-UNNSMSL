@@ -25,28 +25,18 @@
 %==============================================================================
 \def\logo{%
   \includegraphics[width=2.52cm]{northumbria_logo.pdf}
+}
 
 
 %==============================================================================
 % Foot line
 %==============================================================================
-\defbeamertemplate*{footline}{UNNSMSL}{%
-  \ifnum\thepage>1%
-  \vspace{-2cm}%
-  \hskip1.9cm%
-  \begin{beamercolorbox}[wd=\paperwidth, ht=1cm]{page number in head/foot}
-    \begin{columns}
-      \begin{column}{.71\paperwidth}
-        \vspace{-0.1cm}
-        Smart Materials \& Surfaces Lab
-      \end{column}
-      \begin{column}{.71\paperwidth}
-        \logo
-        \hspace{-.2cm}
-        \insertframenumber\,\kern1em\vskip2pt%
-      \end{column}
-    \end{columns}
-    \vspace{.2cm}
-  \end{beamercolorbox}
-  \fi
+\setbeamertemplate{footline}{
+   \begin{beamercolorbox}[ht=4ex,leftskip=0.5cm,rightskip=.5cm]{page number in head/foot}
+    Smart Materials \& Surfaces Lab \hfill
+    \logo
+    \hspace{-0.2cm}
+    \parbox{\widthof{100}}{\insertframenumber}
+   \end{beamercolorbox}
+   \vspace*{0.3cm}
 }
